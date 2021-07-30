@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Listado de tareas
+{% endblock %}
+
+{% block body %}
+  <div class="example-wrapper">
+    <h2>
+     Todas las tareas
+    </h2>
+    {{ include('includes/task-list.html.twig') }}
+  </div>
+{% endblock %}
+

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Listado de tareas
+{% endblock %}
+
+{% block body %}
+  <div class="example-wrapper">
+    <h2>
+      {{ task.title }}
+    </h2>
+    <p class="data">
+      {{ task.user.name }} {{ task.user.surname }} | {{
+        task.createdAt|date('d/m/Y H:i')
+      }}
+    </p>
+
+    <p class="data-task">
+      ({{ task.priority }} | {{ task.hours }})
+    </p>
+    <p>
+      {{ task.content }}
+    </p>
+  </div>
+{% endblock %}
